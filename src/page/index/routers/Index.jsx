@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel, Row, Col, Modal } from 'antd';
+import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import DefaultLayout from '../../../component/DefaultLayout';
 
@@ -33,9 +34,11 @@ class Index extends Component {
       <DefaultLayout>
         <div className="top-banner">
           <Carousel afterChange={onChange}>
-              <div className="banner-pic-container" onClick={() => this.showVideo()}>
-                <img className="banner-pic" src="/pic/banner/banner.jpg"></img>
-              </div>
+              <Link to={"/video"}>
+                <div className="banner-pic-container">
+                  <img className="banner-pic" src="/pic/banner/banner.jpg"></img>
+                </div>
+              </Link>
           </Carousel>
         </div>
         <div className="business-summary">
